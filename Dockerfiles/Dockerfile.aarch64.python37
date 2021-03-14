@@ -1,7 +1,7 @@
 FROM arm64v8/python:3.7-slim
 
 RUN apt-get update \
-    && pip install setuptools wheel pytest flake8
+    && pip install setuptools wheel pytest flake8 cython
 
 COPY ./run-on-arch-install.sh /root/run-on-arch-install.sh
 RUN chmod +x /root/run-on-arch-install.sh && /root/run-on-arch-install.sh
