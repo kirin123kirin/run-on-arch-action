@@ -3,7 +3,7 @@ FROM arm64v8/gcc:latest
 
 ARG BUILD_PYTHON_VERSIONS="3.9.2 3.8.8 3.7.9 3.6.13"
 ENV PYTHON_CONFIGURE_OPTS="--enable-shared"
-VER=3.9
+ENV VER=3.9
 ENV DL_URL=https://codeload.github.com/python/cpython/tar.gz/$VER
 
 RUN curl -L $DL_URL | tar zxf - \
