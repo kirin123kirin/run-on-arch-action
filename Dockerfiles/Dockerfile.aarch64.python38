@@ -1,4 +1,4 @@
-FROM arm64v8/python:3.9-slim
+FROM arm64v8/python:3.8-slim
 
 RUN apt-get update \
     && pip install setuptools wheel pytest flake8
