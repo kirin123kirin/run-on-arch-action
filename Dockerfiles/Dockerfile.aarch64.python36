@@ -1,4 +1,4 @@
-FROM arm64v8/python:3.6-slim
+FROM arm64v8/python:3.6
 
 RUN apt-get update \
     && pip install setuptools wheel pytest flake8 cython
