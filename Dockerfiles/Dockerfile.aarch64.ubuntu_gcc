@@ -8,7 +8,7 @@ ENV DL_URL=https://codeload.github.com/python/cpython/tar.gz/$VER
 
 RUN curl -L $DL_URL | tar zxf - \
     && cd cpython-${VER} \
-    && .configure --enable-shared \
+    && ./configure --enable-shared \
     && make -s -j2 \
     && make install \
     && cd .. && rm -rf cpython-${VER}
