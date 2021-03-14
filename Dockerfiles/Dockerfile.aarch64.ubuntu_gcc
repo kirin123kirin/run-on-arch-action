@@ -10,7 +10,7 @@ RUN curl -L $DL_URL | tar zxf - \
     && cd cpython-${VER} \
     && .configure --enable-shared \
     && make -s -j2 \
-    && make install
+    && make install \
     && cd .. && rm -rf cpython-${VER}
 
 COPY ./run-on-arch-install.sh /root/run-on-arch-install.sh
